@@ -115,10 +115,10 @@ La couleur principale de chaque famille est représentée par la **convention de
 | neutral | 900 | `neutral-900` | `--ita-color-neutral-900` |
 
 Exemple de table de couleurs valide
-![Exemple de table de couleurs valide](css-colors-requirements-example-1.webp)
+![Exemple de table de couleurs valide](/profile/css-colors-requirements-example-1.webp)
 
 Exemple de table de couleurs invalide
-![Exemple de table de couleurs invalide](css-colors-requirements-example-2-invalid.webp)
+![Exemple de table de couleurs invalide](/profile/css-colors-requirements-example-2-invalid.webp)
 
 
 ### [TOKENS] Espacements
