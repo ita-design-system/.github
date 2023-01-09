@@ -319,3 +319,30 @@ Les ombres portées sont classées par ordre croissant d'élévation selon une *
 | **0** <sup>1</sup> | **none** <sup>1</sup> | `--ita-shadow-0` |
 
 <sub>(1) L'élevation nulle `0` -> `none` est réservée à l'équipe de développement front-end du ITADS, elle n'est pas demandée au client. <sub>
+
+## [DEV] Conventions de désignations
+
+Les propriétés CSS ne peuvent être affectées qu'à un seul composant. La convention de désignation est la suivante: 
+
+**`<TYPE_D_OBJET>-<ABRÉGÉ_1>-<ABRÉGÉ_2>`**
+    * **`<TYPE_D_OBJET>`**: peut être uniquement un modifieur `m-` ou un utilitaire `u-`.
+    * **`<ABRÉGÉ_1>-`**: Abréviation de propriété CSS ou abstraction fonctionnelle.
+    * **`<ABRÉGÉ_2>-`**: Nom de la valeur, peut désigner directement la valeur (par ex. "center") ou une valeur abstraite comme un index.
+
+* **Exemples d'abréviations de propriétés :**
+    `m-ta-center`
+        * `ta-` désigne la propriété `text-align`.
+        * `center` désigne la valeur.
+* **Exemples d'abstractions fonctionnelles :**
+    * `m-main-space-between` 
+        * `m-* désigne qu'il s'agit d'un modifieur.
+        * `main-` désigne l'axe "main" flexbox.
+        * `space-between` désigne la valeur.
+    * `m-fs-10` 
+        * `m-* désigne qu'il s'agit d'un modifieur.
+        * `fs-` désigne la propriété "font-size".
+        * `10` désigne le design token numéro 10 sur lequel est assigné une taille de fonte.
+    * `u-c-primary-500`
+        * `u-* désigne qu'il s'agit d'un utilitaire.
+        * `c-` désigne la propriété `color`.
+        * `primary-500` désigne le design token couleur "primary-500" sur lequel est assigné une couleur.
