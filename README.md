@@ -324,10 +324,10 @@ Les ombres portées sont classées par ordre croissant d'élévation selon une *
 
 Les propriétés CSS ne peuvent être affectées qu'à un seul composant. La convention de désignation est la suivante: 
 
-**`<TYPE_D_OBJET>-<ABRÉGÉ_1>-<ABRÉGÉ_2>`**
-    * **`<TYPE_D_OBJET>`**: peut être uniquement un modifieur `m-` ou un utilitaire `u-`.
-    * **`<ABRÉGÉ_1>-`**: Abréviation de propriété CSS ou abstraction fonctionnelle.
-    * **`<ABRÉGÉ_2>-`**: Nom de la valeur, peut désigner directement la valeur (par ex. "center") ou une valeur abstraite comme un index.
+* **`<TYPE_D_OBJET>-<ABRÉGÉ_1>-<ABRÉGÉ_2>`** 
+    * **`<TYPE_D_OBJET>`** peut être uniquement un modifieur `m-` ou un utilitaire `u-`.
+    * **`<ABRÉGÉ_1>-`** abréviation de propriété CSS ou abstraction fonctionnelle.
+    * **`<ABRÉGÉ_2>`** nom de la valeur, peut désigner directement la valeur (par ex. "center") ou une valeur abstraite comme un index.
 
 * **Exemples d'abréviations de propriétés :**
     `m-ta-center`
