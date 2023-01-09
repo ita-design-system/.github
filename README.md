@@ -335,14 +335,14 @@ Les propriétés CSS ne peuvent être affectées qu'à un seul composant. La con
         * `center` désigne la valeur.
 * **Exemples d'abstractions fonctionnelles :**
     * `m-main-space-between` 
-        * `m-* désigne qu'il s'agit d'un modifieur.
+        * `m-` désigne qu'il s'agit d'un modifieur.
         * `main-` désigne l'axe "main" flexbox.
         * `space-between` désigne la valeur.
     * `m-fs-10` 
-        * `m-* désigne qu'il s'agit d'un modifieur.
+        * `m-` désigne qu'il s'agit d'un modifieur.
         * `fs-` désigne la propriété "font-size".
         * `10` désigne le design token numéro 10 sur lequel est assigné une taille de fonte.
     * `u-c-primary-500`
-        * `u-* désigne qu'il s'agit d'un utilitaire.
+        * `u-` désigne qu'il s'agit d'un utilitaire.
         * `c-` désigne la propriété `color`.
-        * `primary-500` désigne le design token couleur "primary-500" sur lequel est assigné une couleur.
+        * `primary-500` désigne le design token couleur "primary-500" sur lequel est assignée une couleur.
