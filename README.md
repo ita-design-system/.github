@@ -330,7 +330,7 @@ Les propriétés CSS ne peuvent être affectées qu'à un seul composant. La con
     * **`<ABRÉGÉ_2>`** nom de la valeur, peut désigner directement la valeur (par ex. "center") ou une valeur abstraite comme un index.
 
 * **Exemples d'abréviations de propriétés :**
-    `m-ta-center`
+    * `m-ta-center`
         * `ta-` désigne la propriété `text-align`.
         * `center` désigne la valeur.
 * **Exemples d'abstractions fonctionnelles :**
