@@ -21,6 +21,8 @@ La méthodologie utilisée est une hybridation de [Atomic Design](https://bradfr
 
 ### [CSS] Composant
 
+![](img/mermaid-diagram-2023-01-10-144853.svg)
+
 Un composant `c-` ou `my-` est une classe CSS qui contient zéro ou plusieurs propriétés CSS. Le composant peut affecter des [pseudo-classes](https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes) et des [pseudo-éléments](https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-elements). Le nom de cette classe est composé d'un préfixe et d'un nom, souvent abrégé, qui désigne une fonctionnalité. Exemples : 
 * `c-txt` n'applique aucune propriété sur l'élément spécifié.
   * `c-` : préfixe composant.
