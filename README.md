@@ -56,7 +56,7 @@ Un utilitaire `u-`est une classe qui affecte une et une seule propriété en la 
   * `ta-` : nom de la propriété affectée.
   * `center` : nom de la valeur.
 
-## [TOKENS] Fondamentaux
+## [TOKENS] Design tokens
 
 Les fondamentaux, également appelés *design tokens*, sont les parties élémentaires indivisibles du Design System à partir desquelles les composants, modifieurs et utilitaires sont créés.
 
@@ -320,9 +320,119 @@ Les ombres portées sont classées par ordre croissant d'élévation selon une *
 
 <sub>(1) L'élevation nulle `0` -> `none` est réservée à l'équipe de développement front-end du ITADS, elle n'est pas demandée au client. <sub>
 
+## [DEV] Variables CSS
+
+Les design tokens sont disponibles sous forme de variables CSS désignées comme suit:
+
+**`var(--ita-<TYPE_DE_TOKEN>-<NOM_DU_TOKEN>)`**
+
+| Type de design token | Typologie variables CSS <TYPE> |
+|:-|:-|
+| `$briks-colors` | `var(--ita-color-<TOKEN_COULEUR>)` |
+| `$briks-screen-sizes` | `var(--ita-screen-size-<TOKEN_TAILLE_ECRAN>)` | 
+| `$briks-font-families` | `var(--ita-font-family-<token_fonte>)` |
+| `$briks-font-sizes` | `var(--ita-font-size-<TOKEN_TAILLE_DE_FONTE>)` |
+| `$briks-spacings` | `var(--ita-spacing-<TOKEN_ESPACEMENT>)` |
+| `$briks-borders` | `var(--ita-border-<TOKEN_BORDURE>)` |
+| `$briks-border-radius` | `var(--ita-border-radius-<TOKEN_ARRONDI>)` |
+| `$briks-shadows` | `var(--ita-shadow-<TOKEN_ÉLÉVATION>)` |
+
+Exemples de désignations 
+
+```scss
+$briks-colors: (
+    primary-100: #061931,   // var(--ita-color-primary-100)
+    primary-200: #0c3161,   // var(--ita-color-primary-200)
+    primary-300: #124a92,   // var(--ita-color-primary-300)
+    primary-400: #1863c2,   // var(--ita-color-primary-400)
+    primary-500: #2C7DE5,   // var(--ita-color-primary-500)
+    primary-600: #5697ea,   // var(--ita-color-primary-600)
+    primary-700: #80b1ef,   // var(--ita-color-primary-700)
+    primary-800: #abcbf5,   // var(--ita-color-primary-800)
+    primary-900: #d5e5fa,   // var(--ita-color-primary-900)
+$briks-screen-sizes: (
+    xs: 0,                  // var(--ita-screen-size-xs)
+    sm: 608,                // var(--ita-screen-size-sm)
+    md: 896,                // var(--ita-screen-size-md)
+    lg: 1080,               // var(--ita-screen-size-lg)
+    xl: 1440                // var(--ita-screen-size-xl)
+);
+$briks-fonts: (
+    lead-800: (             // var(--ita-font-family-lead-800)
+        type:        'local',
+        filename:    'subset-Sora-ExtraBold',
+        name:        'Sora-ExtraBold',
+        weight:      800,
+        path:        '../fonts/Sora/',
+        fallback:    'sans-serif'
+    ),
+    lead-400: (             // var(--ita-font-family-lead-400)
+        type:        'local',
+        filename:    'subset-Sora-Regular',
+        name:        'Sora-Regular',
+        weight:      400,
+        path:        '../fonts/Sora/',
+        fallback:    'sans-serif'
+    )
+);
+$briks-font-sizes: (
+    15: 60,                                 // var(--ita-font-size-15)
+    14: 54,                                 // var(--ita-font-size-14)
+    13: 48,                                 // var(--ita-font-size-13)
+    12: 42,                                 // var(--ita-font-size-12)
+    11: 36,                                 // var(--ita-font-size-11)
+    10: 32,                                 // var(--ita-font-size-10)
+    9: 28,                                  // var(--ita-font-size-9)
+    8: 24,                                  // var(--ita-font-size-8)
+    7: 20,                                  // var(--ita-font-size-7)
+    6: 18,                                  // var(--ita-font-size-6)
+    5: 16,                                  // var(--ita-font-size-5)
+    4: 14,                                  // var(--ita-font-size-4)
+    3: 12,                                  // var(--ita-font-size-3)
+    2: 10,                                  // var(--ita-font-size-2)
+    1: 8                                    // var(--ita-font-size-1)
+);
+$briks-spacings: (
+    14: 112,                                // var(--ita-spacing-14)
+    13: 96,                                 // var(--ita-spacing-13)
+    12: 80,                                 // var(--ita-spacing-12)
+    11: 64,                                 // var(--ita-spacing-11)
+    10: 56,                                 // var(--ita-spacing-10)
+    9: 48,                                  // var(--ita-spacing-9)
+    8: 40,                                  // var(--ita-spacing-8)
+    7: 32,                                  // var(--ita-spacing-7)
+    6: 24,                                  // var(--ita-spacing-6)
+    5: 20,                                  // var(--ita-spacing-5)
+    4: 16,                                  // var(--ita-spacing-4)
+    3: 12,                                  // var(--ita-spacing-3)
+    2: 8,                                   // var(--ita-spacing-2)
+    1: 4,                                   // var(--ita-spacing-1)
+    0: 0,                                   // var(--ita-spacing-0)
+);
+$briks-borders: (
+    0:  none,                               // var(--ita-border-0)
+    1:  1px solid my-color(neutral-900),    // var(--ita-border-1)
+    2:  1px solid my-color(primary-900),    // var(--ita-border-2)
+    3:  1px solid my-color(neutral-800),    // var(--ita-border-3)
+    4:  1px solid my-color(primary-800),    // var(--ita-border-4)
+);
+$briks-border-radius: (
+    0: 0,                                   // var(--ita-border-radius-0)
+    1: 3,                                   // var(--ita-border-radius-1)
+    2: 6,                                   // var(--ita-border-radius-2)
+    3: 12,                                  // var(--ita-border-radius-3)
+    4: 50,                                  // var(--ita-border-radius-4)
+);
+$briks-shadows: (
+    0: none,                                    // var(--ita-shadow-0)
+    1: 0px 0px 10px 0px my-color(neutral-100),  // var(--ita-shadow-1)
+);
+```
+
+
 ## [DEV] Conventions de désignations
 
-Les propriétés CSS ne peuvent être affectées qu'à un seul composant. La convention de désignation est la suivante: 
+La convention de désignation est la suivante: 
 
 * **`<TYPE_D_OBJET>-<ABRÉGÉ_1>-<ABRÉGÉ_2>`** 
     * **`<TYPE_D_OBJET>`** peut être uniquement un modifieur `m-` ou un utilitaire `u-`.
@@ -414,3 +524,163 @@ Abréviations utilisées dans des modifieurs et utilitaires.
 | white-space | `ws-` |
 | width | `w-` |
 | z-index | `z-` |
+
+## [DEV] Helpers
+
+Il existe des fonctions SASS dédiées à l'usage des design tokens. Elles retournent les variables CSS associées au design tokens accompagnées de leurs valeurs par défaut (au cas où la variable CSS n'existe pas).
+
+### [DEV] my-color
+
+```scss
+my-color($token_couleur);
+// Retourne
+// var(--ita-color-TOKEN_COULEUR, <valeur_par_défaut>)
+// Par exemple pour un token couleur primary-500: #123456
+my-color(primary-500);
+// Retourne
+// var(--ita-color-primary-500, #123456)
+```
+
+### [DEV] my-font-family
+
+```scss
+my-font-family($token_fonte);
+// Retourne
+// var(--ita-font-family-token_fonte, <valeur_par_défaut>)
+// Par exemple pour un token typo de nom lead-400
+my-font-family(lead-400);
+// Retourne
+// var(--ita-font-family-lead-400, Sora-Regular, sans-serif)
+```
+
+### [DEV] my-font-size
+
+```scss
+my-font-size($token_taille_de_fonte);
+// Retourne
+// var(--ita-font-size-token_taille_de_fonte, <valeur_par_défaut>)
+// Par exemple pour un token taille de fonte 9: 28
+my-font-size(9);
+// Retourne
+// var(--ita-font-size-9, 28px)
+```
+
+### [DEV] my-spacing
+
+Reprend le principe de raccourcis des propriétés CSS margin et padding.
+
+#### [DEV] 4 côtés
+
+```scss
+my-spacing($token_espacement);
+// Retourne
+// var(--ita-spacing-token_espacement, <valeur_par_défaut>)
+// Par exemple pour un token espacement 10: 56
+my-spacing(10);
+// Retourne
+// var(--ita-spacing-10, 56px)
+```
+
+#### [DEV] vertical | horizontal
+
+```scss
+my-spacing($token_espacement_1, $token_espacement_2);
+// Retourne
+// var(--ita-spacing-token_espacement_1, <valeur_par_défaut_1>) var(--ita-spacing-token_espacement_2, <valeur_par_défaut_2>)
+// Par exemple pour des tokens espacement 4: 16 et 3: 12
+my-spacing(3, 4);
+// Retourne
+// var(--ita-spacing-3, 12px) var(--ita-spacing-4, 16px)
+```
+
+#### [DEV] haut | droit | bas | gauche
+
+```scss
+my-spacing($token_1, $token_2, $token_3, $token_4);
+// Retourne
+// var(--ita-spacing-token_1, <valeur_par_défaut_1>) var(--ita-spacing-token_2, <valeur_par_défaut_2>) var(--ita-spacing-token_3, <valeur_par_défaut_3>) var(--ita-spacing-token_4, <valeur_par_défaut_4>)
+// Par exemple pour des tokens espacement:
+// 3: 12,
+// 4: 16,
+// 5: 20,
+// 6: 24,
+my-spacing(3, 4, 6, 5);
+// Retourne
+// var(--ita-spacing-3, 12px) var(--ita-spacing-4, 16px) var(--ita-spacing-6, 24px) var(--ita-spacing-5, 20px)
+```
+
+### [DEV] my-border-radius
+
+Reprend - en partie - le principe de raccourcis des propriétés CSS border-radius.
+
+#### [DEV] global
+
+```scss
+my-border-radius($token_arrondi);
+// Retourne
+// var(--ita-border-radius-token_arrondi, <valeur_par_défaut>)
+// Par exemple pour un token arrondi 2: 6
+my-border-radius(2);
+// Retourne
+// var(--ita-border-radius-2, 6px)
+```
+
+#### [DEV] 2 arrondis
+
+* **`$token_arrondi_1`** coin en haut à gauche et en bas à droite
+* **`$token_arrondi_2`** coin en haut à droite et en bas à gauche
+
+```scss
+my-border-radius($token_arrondi_1, $token_arrondi_2);
+// Retourne
+// var(--ita-border-radius-token_arrondi_1, <valeur_par_défaut_1>) var(--ita-border-radius-token_arrondi_2, <valeur_par_défaut_2>)
+// Par exemple pour des tokens arrondis 1: 3 et 2: 6
+my-border-radius(1, 2);
+// Retourne
+// var(--ita-border-radius-1, 3px) var(--ita-border-radius-2, 6px)
+```
+
+#### [DEV] 4 arrondis
+
+* **`$token_1`** coin en haut à gauche
+* **`$token_2`** coin en haut à droite
+* **`$token_3`** coin en bas à droite
+* **`$token_4`** coin en bas à gauche
+
+```scss
+my-border-radius($token_1, $token_2, $token_3, $token_4);
+// Retourne
+// var(--ita-border-radius-token_1, <valeur_par_défaut_1>) var(--ita-border-radius-token_2, <valeur_par_défaut_2>) var(--ita-border-radius-token_3, <valeur_par_défaut_3>) var(--ita-border-radius-token_4, <valeur_par_défaut_4>)
+// Par exemple pour des tokens arrondis:
+// 0: 0,
+// 1: 3,
+// 2: 6,
+// 3: 12,
+my-border-radius(0, 3, 2, 1);
+// Retourne
+// var(--ita-border-radius-0, 0px) var(--ita-border-radius-3, 12px) var(--ita-border-radius-2, 6px) var(--ita-border-radius-1, 3px)
+```
+
+### [DEV] my-border
+
+```scss
+my-border($token_bordure);
+// Retourne
+// var(--ita-border-token_bordure, <valeur_par_défaut>)
+// Par exemple pour un token bordure 3: 1px solid my-color(neutral-800)
+my-border(10);
+// Retourne
+// var(--ita-border-3, 1px solid var(--ita-color-neutral-800, #e1e1e1))
+```
+
+### [DEV] my-shadow
+
+```scss
+my-shadow($token_elevation);
+// Retourne
+// var(--ita-shadow-token_elevation, <valeur_par_défaut>)
+// Par exemple pour un token élévation 1: 0px 0px 10px 0px my-color(neutral-100)
+my-shadow(1);
+// Retourne
+// var(--ita-shadow-1, 0px 0px 10px 0px var(--ita-color-neutral-100, #000000))
+```
