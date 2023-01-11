@@ -62,6 +62,84 @@ Un utilitaire `u-`est une classe qui affecte une et une seule propriété en la 
 
 Les fondamentaux, également appelés *design tokens*, sont les parties élémentaires indivisibles du Design System à partir desquelles les composants, modifieurs et utilitaires sont créés.
 
+
+```mermaid
+classDiagram
+    DesignTokens <|-- Colors
+    DesignTokens <|-- ScreenSizes
+    DesignTokens <|-- Fonts
+    DesignTokens <|-- FontSizes
+    DesignTokens <|-- Spacings
+    DesignTokens <|-- Borders
+    DesignTokens <|-- BorderRadii
+    DesignTokens <|-- Shadows
+    Colors <|-- Color
+    ScreenSizes <|-- ScreenSize
+    Spacings <|-- Spacing
+    Fonts <|-- Font
+    FontSizes <|-- FontSize
+    Borders <|-- Border
+    BorderRadii <|-- BorderRadius
+    Shadows <|-- Shadow
+    class DesignTokens{
+        SASS Map
+    }
+    class Colors{
+        SASS Map
+    }
+    class Color{
+        CSS color
+    }
+    class ScreenSizes{
+        SASS Map
+    }
+    class ScreenSize{
+        Int
+    }
+    class Fonts{
+        SASS Map
+    }
+    class Font{
+        type
+        path
+        name
+        filename
+        fallback
+    }
+    class FontSizes{
+        SASS Map
+    }
+    class FontSize{
+        Int
+    }
+    class Spacings{
+        SASS Map
+    }
+    class Spacing{
+        Int
+    }
+    class Borders{
+        SASS Map
+    }
+    class Border{
+        CSS border-width
+        CSS border-style
+        my-color()
+    }
+    class BorderRadii{
+        SASS Map
+    }
+    class BorderRadius{
+        CSS border-radius
+    }
+    class Shadows{
+        SASS Map
+    }
+    class Shadow{
+        CSS box-shadow
+    }
+```
+
 ### [TOKENS] Couleurs
 
 Le nombre de couleurs est illimité mais il doit respecter les règles suivantes&nbsp;: les couleurs s'organisent en familles, une famille de couleurs complète doit contenir 9 nuances de la plus sombre à la plus claire comme dans l'exemple ci-dessous. *Important&nbsp;: plus le nombre de familles de couleurs est élevé, plus les performances du framework sont impactées.*
