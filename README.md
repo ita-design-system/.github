@@ -597,6 +597,7 @@ Abréviations utilisées dans des modifieurs et utilitaires.
 | text-align | `ta-` |
 | text-decoration | `td-` |
 | text-transform | `tt-` |
+| transition | `transition-` |
 | top | `top-` |
 | vertical-align | `va-` |
 | visibility | `v-` |
