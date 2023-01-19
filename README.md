@@ -81,6 +81,7 @@ classDiagram
         opacity
         outline
         pointer-events
+        transition
     }
  ```
 
