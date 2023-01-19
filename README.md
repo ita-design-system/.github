@@ -71,7 +71,7 @@ classDiagram
         word-break
     }
     class c_skin {
-        background-color
+        background
         border
         border-radius
         box-shadow
