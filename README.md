@@ -21,18 +21,79 @@ La méthodologie utilisée est une hybridation de [Atomic Design](https://bradfr
 
 ### [CSS] Composant
 
-![](img/mermaid-diagram-2023-01-10-144853.svg)
+Portée des composants sur les propriétés CSS:
+
+```mermaid
+classDiagram
+    class c_flex {
+        display: flex
+        align-items
+        justify-content
+        flex-wrap
+        flex-direction
+        gap
+    }
+    class c_dim {
+        width
+        max-width
+        min-width
+        height
+        max-height
+        min-height
+        margin
+        padding
+        overflow
+        order
+        grow
+    }
+    class c_pos {
+        position
+        top
+        right
+        bottom
+        left
+        transform
+        z-index
+    }
+    class c_txt {
+        font-family
+        font-size
+        font-style
+        font-weight
+        letter-spacing
+        line-height
+        text-align
+        text-decoration
+        text-overflow
+        text-transform
+        vertical-align
+        white-space
+        word-break
+    }
+    class c_skin {
+        background-color
+        border
+        border-radius
+        box-shadow
+        color
+        cursor
+        list-style
+        opacity
+        outline
+        pointer-events
+    }
+ ```
 
 Un composant `c-` ou `my-` est une classe CSS qui contient zéro ou plusieurs propriétés CSS. Le composant peut affecter des [pseudo-classes](https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes) et des [pseudo-éléments](https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-elements). Le nom de cette classe est composé d'un préfixe et d'un nom, souvent abrégé, qui désigne une fonctionnalité. Exemples : 
-* `c-txt` n'applique aucune propriété sur l'élément spécifié.
+* `c-txt` seule n'applique aucune propriété sur l'élément spécifié.
   * `c-` : préfixe composant.
   * `txt` : nom du composant dédié au texte.
-* `c-flex` applique uniquement la propriété `display: flex` sur l'élément spécifié.
+* `c-flex` seule applique uniquement la propriété `display: flex` sur l'élément spécifié.
   * `c-` : préfixe composant.
   * `flex` : nom du composant de grille.
-* `c-btn` applique de multiples propriétés sur l'élément spécifié.
+* `c-skin` seule n'applique aucune propriété sur l'élément spécifié.
   * `c-` : préfixe composant.
-  * `btn` : nom du composant bouton.
+  * `skin` : nom du composant dédié aux aspects et apparences.
 
 ### [CSS] Modifieur
 
