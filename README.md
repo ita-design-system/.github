@@ -136,7 +136,7 @@ classDiagram
     DesignTokens <|-- FontSizes
     DesignTokens <|-- Spacings
     DesignTokens <|-- Borders
-    DesignTokens <|-- BorderRadius
+    DesignTokens <|-- BorderRadii
     DesignTokens <|-- Shadows
     Colors <|-- Color
     ScreenSizes <|-- ScreenSize
@@ -144,7 +144,7 @@ classDiagram
     Fonts <|-- Font
     FontSizes <|-- FontSize
     Borders <|-- Border
-    BorderRadius <|-- BorderRadius
+    BorderRadii <|-- BorderRadius
     Shadows <|-- Shadow
     class DesignTokens{
         SASS Map
