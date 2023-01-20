@@ -34,17 +34,17 @@ classDiagram
         gap
     }
     class c_dim {
-        width
-        max-width
-        min-width
+        flex-grow
         height
-        max-height
-        min-height
         margin
-        padding
-        overflow
+        max-height
+        max-width
+        min-height
+        min-width
         order
-        grow
+        overflow
+        padding
+        width
     }
     class c_pos {
         position
