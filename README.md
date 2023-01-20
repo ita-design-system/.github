@@ -136,7 +136,7 @@ classDiagram
     DesignTokens <|-- FontSizes
     DesignTokens <|-- Spacings
     DesignTokens <|-- Borders
-    DesignTokens <|-- BorderRadii
+    DesignTokens <|-- BorderRadius
     DesignTokens <|-- Shadows
     Colors <|-- Color
     ScreenSizes <|-- ScreenSize
@@ -144,7 +144,7 @@ classDiagram
     Fonts <|-- Font
     FontSizes <|-- FontSize
     Borders <|-- Border
-    BorderRadii <|-- BorderRadius
+    BorderRadius <|-- BorderRadius
     Shadows <|-- Shadow
     class DesignTokens{
         SASS Map
@@ -368,7 +368,7 @@ Exemple de tableau de correspondance de tailles de texte valides, les différent
 
 ### [TOKENS] Points de rupture
 
-Également appelés "breakpoints" ou sous l'appellation "screen size", ils sont à base du design adaptif ou "responsive". Les points de ruptures sont des design tokens, des noms personnalisés associés à des valeurs qui forment des intervalles entre lesquels les composants, modifieurs et utilitaires peuvent se comporter différemment. Ils sont directement liés à la taille du terminal de l'utilisateur. 
+Également appelés "breakpoints" ou sous l'appellation "screen size", ils sont à la base du design adaptif ou "responsive". Les points de ruptures sont des design tokens, des noms personnalisés associés à des valeurs qui forment des intervalles entre lesquels les composants, modifieurs et utilitaires peuvent se comporter différemment. Ils sont directement liés à la taille du terminal de l'utilisateur. 
 
 Le nombre de points de rupture n'est pas limité. *Cependant, plus le nombre de points de rupture est élevé, plus les performances du framework sont impactées.*
 
