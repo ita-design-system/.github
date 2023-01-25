@@ -8,18 +8,25 @@ Le nombre de couleurs est illimité mais il doit respecter les règles suivantes
 
 La couleur principale de chaque famille est représentée par la **convention de désignation `<NOM_DE_LA_COULEUR>-500`**. Les valeurs abstraites `-400`, `-300`, `-200` et `-100` sont les nuances sombres de la couleur principale et les valeurs `-600`, `-700`, `-800` et `-900` sont des nuances plus claires.
 
-* `<NOM_DE_LA_COULEUR>-100` nuance la plus sombre 
-* `<NOM_DE_LA_COULEUR>-200` nuance sombre 
-* `<NOM_DE_LA_COULEUR>-300` nuance sombre 
-* `<NOM_DE_LA_COULEUR>-400` nuance sombre 
+* `<NOM_DE_LA_COULEUR>-100` nuance la plus claire 
+* `<NOM_DE_LA_COULEUR>-200` nuance claire 
+* `<NOM_DE_LA_COULEUR>-300` nuance claire 
+* `<NOM_DE_LA_COULEUR>-400` nuance claire 
 * **`<NOM_DE_LA_COULEUR>-500` couleur principale**
-* `<NOM_DE_LA_COULEUR>-600` nuance claire
-* `<NOM_DE_LA_COULEUR>-700` nuance claire 
-* `<NOM_DE_LA_COULEUR>-800` nuance claire 
-* `<NOM_DE_LA_COULEUR>-900` nuance la plus claire 
+* `<NOM_DE_LA_COULEUR>-600` nuance sombre
+* `<NOM_DE_LA_COULEUR>-700` nuance sombre 
+* `<NOM_DE_LA_COULEUR>-800` nuance sombre 
+* `<NOM_DE_LA_COULEUR>-900` nuance la plus sombre 
 
-Exemple de table de couleurs valide
-![Exemple de table de couleurs valide](profile/css-colors-requirements-example-1.webp)
+Exemples de table de couleurs valide
+
+https://tailwindcss.com/docs/customizing-colors
+
+![image](https://user-images.githubusercontent.com/13103047/214549972-501c3dea-d4e4-4d90-bc92-dc8ec7026dc0.png)
+
+https://getbootstrap.com/docs/4.0/getting-started/theming/#grays
+
+![image](https://user-images.githubusercontent.com/13103047/214550347-0fa2b6db-33b9-472c-85c5-9d3c06797092.png)
 
 Exemple de table de couleurs invalides
 ![Exemple de table de couleurs invalide](profile/css-colors-requirements-example-2-invalid.webp)
