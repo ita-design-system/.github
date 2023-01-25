@@ -25,15 +25,17 @@ Portée des composants sur les propriétés CSS:
 
 ```mermaid
 classDiagram
-    class c_flex {
-        display: flex
+    class c_dis {
+        display
         align-items
         justify-content
         flex-wrap
         flex-direction
         gap
+        grid-gap
     }
     class c_dim {
+        aspect-ratio
         flex-grow
         height
         margin
