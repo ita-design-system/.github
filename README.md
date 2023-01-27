@@ -628,6 +628,7 @@ Abréviations utilisées dans des modifieurs et utilitaires.
 | border-bottom-left-radius | `bradbl-` |
 | bottom | `bottom-` |
 | box-shadow | `bs-` |
+| box-sizing | `bsizing-` |
 | break-after | `ba-` |
 | color | `c-` |
 | cursor | `cur-` |
