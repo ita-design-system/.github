@@ -617,6 +617,10 @@ Abréviations utilisées dans des modifieurs et utilitaires.
 | background-repeat | `brep-` |
 | background-size | `bsize-` |
 | border | `b-` |
+| border-style | `bstyle-` | `c-skin m-bstyle-` | `u-bstyle-` |
+| border-width | `bwidth-` | `c-skin m-bwidth-` | `u-bwidth-` |
+| border-color | `bcolor-` | `c-skin m-bcolor-` | `u-bcolor-` |
+| border-image | `bimage-` | `c-skin m-bimage-` | `u-bimage-` |
 | border-top | `bt-` |
 | border-right | `br-` |
 | border-bottom | `bb-` |
