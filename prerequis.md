@@ -89,35 +89,6 @@ Les tailles de texte peuvent être fournis dans l'ordre croissant ou décroissan
 * 10px
 * 8px
 
-## Bordures
-
-Une bordure est définie par une épaisseur de trait, un type de trait et une couleur. **Le nombre de bordures ne peut excéder 16. Plus le nombre de bordures est élevé, plus les performances du framework sont impactées.**
-
-Les bordures peuvent être nommées selon leur définition, `<EPAISSEUR>, <TYPE-TRAIT>, <COULEUR>` avec,
-
-* **`<EPAISSEUR>`** en pixel, par exemple '1px',
-* **`<TYPE-TRAIT>`** en toute lettres, par exemple 'dashed' (ou 'poitillé'),
-* **`<TOKEN_COULEUR>`** le design token de la [couleur](#couleurs), par exemple 'primary-500'.
-
-Elles peuvent-être fournies ordonnées selon leurs visibilités, comme dans l'exemple ci-dessous (de la moins visible à la plus visible).
-
-* 1px, solid, transparent-800
-* 1px, solid, transparent-500
-* 1px, dashed, neutral-500
-* 1px, solid, neutral-900
-* 1px, solid, neutral-500
-* 1px, solid, primary-500
-* 1px, solid, support-success-500
-* 1px, solid, support-warning-500
-* 1px, solid, support-danger-500
-* 1px, solid, neutral-200
-* 2px, solid, neutral-900
-* 2px, solid, neutral-500
-* 2px, solid, neutral-200
-* 3px, solid, neutral-500
-* 3px, solid, primary-500
-* 3px, double, neutral-500
-
 ## Coins arrondis
 
 Un coin arrondi est défini par un ou deux rayons de courbure. Le nombre de coins arrondis n'est pas limité. **Le nombre de coins arrondis ne peut excéder 16. Cependant, plus le nombre de coins arrondis est élevé, plus les performances du framework sont impactées.**
