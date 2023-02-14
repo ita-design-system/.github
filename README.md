@@ -90,40 +90,39 @@ classDiagram
     }
  ```
 
-Un composant `c-` ou `my-` est une classe CSS qui contient zéro ou plusieurs propriétés CSS. Le composant peut affecter des [pseudo-classes](https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes) et des [pseudo-éléments](https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-elements). Le nom de cette classe est composé d'un préfixe et d'un nom, souvent abrégé, qui désigne une fonctionnalité. Exemples : 
-* `c-txt` seule n'applique aucune propriété sur l'élément spécifié.
+Un composant `c-` est une classe CSS qui contient zéro ou plusieurs propriétés CSS. Le composant peut affecter des [pseudo-classes](https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes) et des [pseudo-éléments](https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-elements). Le nom de cette classe est composé d'un préfixe et d'un nom, souvent abrégé, qui désigne une fonctionnalité. Exemples : 
+* `c-txt` nom de la classe CSS du composant c-txt.
   * `c-` : préfixe composant.
   * `txt` : nom du composant dédié au texte.
-* `c-flex` seule applique uniquement la propriété `display: flex` sur l'élément spécifié.
-  * `c-` : préfixe composant.
-  * `flex` : nom du composant de grille.
-* `c-skin` seule n'applique aucune propriété sur l'élément spécifié.
+* `c-skin` nom de la classe CSS du composant c-skin.
   * `c-` : préfixe composant.
   * `skin` : nom du composant dédié aux aspects et apparences.
 
 ### [CSS] Modifieur
 
-Un modifieur `m-` ou `mod-` est directement associé à un composant. Il n'a aucun effet s'il est utilisé seul. C'est une classe CSS qui vient ajouter ou surcharger une ou plusieurs propriétés CSS à son composant. Le modifieur peut affecter des [pseudo-classes](https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes) et des [pseudo-éléments](https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-elements). Le nom de cette classe est composé d'un préfixe `m-` et d'un nom, un abrégé qui désigne la ou les propriétés qu'il affecte (`ta-` pour text-align par ex.) et la valeur (`center` par ex.). Exemples :
+Un modifieur `m-` est directement associé à un composant. Il n'a aucun effet s'il est utilisé seul. C'est une classe CSS qui vient ajouter ou surcharger une ou plusieurs propriétés CSS à son composant. Le modifieur peut affecter des [pseudo-classes](https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes) et des [pseudo-éléments](https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-elements). Le nom de cette classe est composé d'un préfixe `m-` et d'un nom, un abrégé qui désigne la ou les propriétés qu'il affecte (`ta-` pour text-align par ex.) et la valeur (`center` par ex.). Exemples :
 * Le modifieur `m-main-space-between` associé à son composant `c-flex` applique la propriété `justify-content: space-between`. `m-main-space-between` appliqué seul n'a aucun effet.
   * `m-` : préfixe modifieur
-  * `main-` : nom de la propriété affectée (ici l'axe main `justify-content` du composabnt flex)
+  * `main-` : nom ou abstraction de la propriété affectée (ici l'axe main `justify-content` du composant flex)
   * `space-between` : valeur associée (`space-between`).
 * Le modifieur `m-ta-center` associé à son composant `c-txt` applique la propriété `text-align: center`. `m-ta-center` appliqué seul n'a aucun effet.
   * `m-` : préfixe modifieur
-  * `ta-` : nom de la propriété affectée
+  * `ta-` : nom ou abstraction de la propriété affectée
   * `center` : valeur associée (`center`).
 
 ### [CSS] Utilitaire
 
-Un utilitaire `u-`est une classe qui affecte une et une seule propriété en la surchargeant (si elle est déjà définie) et en forçant son usage. L'utilitaire peut affecter des [pseudo-classes](https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes) et des [pseudo-éléments](https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-elements). Le nom de cette classe est composé d'un préfixe et d'un nom, souvent abrégé, qui désigne la fonctionnalité du modifieur. Exemples :
+Un utilitaire `u-`est une classe qui affecte une et une seule propriété en la surchargeant (si elle est déjà définie) et en forçant son usage avec le mot-clé `!important`. L'utilitaire peut affecter des [pseudo-classes](https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes) et des [pseudo-éléments](https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-elements). Le nom de cette classe est composé d'un préfixe et d'un nom, souvent abrégé, qui désigne la fonctionnalité d'utilitaire. Exemples :
 * L'utilitaire `u-bc-primary-500` applique et force la propriété `background-color` à la valeur associée à `primary-500`.
   * `u-` : préfixe utilitaire.
   * `bc-` : nom de la propriété affectée.
   * `primary-500` : nom de la valeur
+  * `background-color: var(--ita-color-primary-500, #2C7DE5) !important` rendu CSS
 * L'utilitaire `u-ta-center` applique et force la propriété `text-align` à la valeur associée à `center`.
   * `u-` : préfixe utilitaire.
   * `ta-` : nom de la propriété affectée.
   * `center` : nom de la valeur.
+  * `text-align: center !important` rendu CSS
 
 ## [TOKENS] Design tokens
 
@@ -137,7 +136,6 @@ classDiagram
     DesignTokens <|-- Fonts
     DesignTokens <|-- FontSizes
     DesignTokens <|-- Spacings
-    DesignTokens <|-- Borders
     DesignTokens <|-- BorderRadii
     DesignTokens <|-- Shadows
     Colors <|-- Color
@@ -145,7 +143,6 @@ classDiagram
     Spacings <|-- Spacing
     Fonts <|-- Font
     FontSizes <|-- FontSize
-    Borders <|-- Border
     BorderRadii <|-- BorderRadius
     Shadows <|-- Shadow
     class DesignTokens{
@@ -185,14 +182,6 @@ classDiagram
     class Spacing{
         Int
     }
-    class Borders{
-        SASS Map
-    }
-    class Border{
-        CSS border-width
-        CSS border-style
-        my-color()
-    }
     class BorderRadii{
         SASS Map
     }
@@ -211,49 +200,36 @@ classDiagram
 
 Le nombre de couleurs est illimité mais il doit respecter les règles suivantes&nbsp;: les couleurs s'organisent en familles, une famille de couleurs complète doit contenir 9 nuances de la plus sombre à la plus claire comme dans l'exemple ci-dessous. *Important&nbsp;: plus le nombre de familles de couleurs est élevé, plus les performances du framework sont impactées.*
 
-La couleur principale de chaque famille est représentée par la **convention de désignation `<NOM_DE_LA_COULEUR>-500`**. Les valeurs abstraites `-400`, `-300`, `-200` et `-100` sont les nuances sombres de la couleur principale et les valeurs `-600`, `-700`, `-800` et `-900` sont des nuances plus claires.
+La couleur principale de chaque famille est représentée par la **convention de désignation `<NOM_DE_LA_COULEUR>-500`**. Les valeurs abstraites `-400`, `-300`, `-200` et `-100` sont les nuances claires de la couleur principale et les valeurs `-600`, `-700`, `-800` et `-900` sont des nuances plus sombres.
+Le nombre de couleurs est illimité mais il doit respecter les règles suivantes&nbsp;: les couleurs s'organisent en familles, une famille de couleurs complète doit contenir 9 nuances de la plus claire à la plus sombre comme dans l'exemple ci-dessous. *Important&nbsp;: plus le nombre de familles de couleurs est élevé, plus les performances du framework sont impactées.*
 
-* `<NOM_DE_LA_COULEUR>-100` nuance la plus sombre 
-* `<NOM_DE_LA_COULEUR>-200` nuance sombre 
-* `<NOM_DE_LA_COULEUR>-300` nuance sombre 
-* `<NOM_DE_LA_COULEUR>-400` nuance sombre 
+* `<NOM_DE_LA_COULEUR>-100` nuance la plus claire 
+* `<NOM_DE_LA_COULEUR>-200` nuance claire 
+* `<NOM_DE_LA_COULEUR>-300` nuance claire 
+* `<NOM_DE_LA_COULEUR>-400` nuance claire 
 * **`<NOM_DE_LA_COULEUR>-500` couleur principale**
-* `<NOM_DE_LA_COULEUR>-600` nuance claire
-* `<NOM_DE_LA_COULEUR>-700` nuance claire 
-* `<NOM_DE_LA_COULEUR>-800` nuance claire 
-* `<NOM_DE_LA_COULEUR>-900` nuance la plus claire 
+* `<NOM_DE_LA_COULEUR>-600` nuance sombre
+* `<NOM_DE_LA_COULEUR>-700` nuance sombre 
+* `<NOM_DE_LA_COULEUR>-800` nuance sombre 
+* `<NOM_DE_LA_COULEUR>-900` nuance la plus sombre 
 
-| Nom de la famille | Nuance | Token | Variable CSS |
-|:-|:-|:-|:-|
-| primary | 100 | `primary-100` | `--ita-color-primary-100` |
-| primary | 200 | `primary-200` | `--ita-color-primary-200` |
-| primary | 300 | `primary-300` | `--ita-color-primary-300` |
-| primary | 400 | `primary-400` | `--ita-color-primary-400` |
-| **primary** | **500** | **`primary-500`** | **`--ita-color-primary-500`** |
-| primary | 600 | `primary-600` | `--ita-color-primary-600` |
-| primary | 700 | `primary-700` | `--ita-color-primary-700` |
-| primary | 800 | `primary-800` | `--ita-color-primary-800` |
-| primary | 900 | `primary-900` | `--ita-color-primary-900` |
-| neutral | 100 | `neutral-100` | `--ita-color-neutral-100` |
-| neutral | 200 | `neutral-200` | `--ita-color-neutral-200` |
-| neutral | 300 | `neutral-300` | `--ita-color-neutral-300` |
-| neutral | 400 | `neutral-400` | `--ita-color-neutral-400` |
-| **neutral** | **500** | **`neutral-500`** | **`--ita-color-neutral-500`** |
-| neutral | 600 | `neutral-600` | `--ita-color-neutral-600` |
-| neutral | 700 | `neutral-700` | `--ita-color-neutral-700` |
-| neutral | 800 | `neutral-800` | `--ita-color-neutral-800` |
-| neutral | 900 | `neutral-900` | `--ita-color-neutral-900` |
+Exemples de table de couleurs valide
 
-Exemple de table de couleurs valide
-![Exemple de table de couleurs valide](/profile/css-colors-requirements-example-1.webp)
+https://tailwindcss.com/docs/customizing-colors
 
-Exemple de table de couleurs invalide
-![Exemple de table de couleurs invalide](/profile/css-colors-requirements-example-2-invalid.webp)
+![image](https://user-images.githubusercontent.com/13103047/214549972-501c3dea-d4e4-4d90-bc92-dc8ec7026dc0.png)
+
+https://getbootstrap.com/docs/4.0/getting-started/theming/#grays
+
+![image](https://user-images.githubusercontent.com/13103047/214550347-0fa2b6db-33b9-472c-85c5-9d3c06797092.png)
+
+Exemple de table de couleurs invalides
+![Exemple de table de couleurs invalide](profile/css-colors-requirements-example-2-invalid.webp)
 
 
 ### [TOKENS] Espacements
 
-Les espacements sont utilisés dans les marges, les positionnements ainsi que de nombreux composants, modifieurs et uttilitaires. Le nombre d'espacements doit respecter une échelle d'incréments désignés comme suit. *Important&nbsp;: plus le nombre d'espacements est élevé, plus les performances du framework sont impactées.*
+Les espacements sont utilisés dans les marges, les positionnements ainsi que de nombreux composants, modifieurs et utilitaires. Le nombre d'espacements doit respecter une échelle d'incréments désignés comme suit. *Important&nbsp;: plus le nombre d'espacements est élevé, plus les performances du framework sont impactées.*
 
 Les espacements sont classés par ordre croissant et nommés par une **convention de désignation sous forme d'index `<0 à n>` -> `<VALEUR>`**. 
 
@@ -386,42 +362,6 @@ Exemple de tableau de correspondance de points de rupture
 | lg | de 1288 px à 1576 px |
 | xl | de 1576 px à l'infini |
 
-
-### [TOKENS] Bordures
-
-Une bordure est définie par une épaisseur de trait, un type de trait et une couleur. Les bordures sont classées par ordre croissant de visibilité selon une **convention de désignation sous forme d'index `<1 à n>`**. *Important&nbsp;: plus le nombre de bordures est élevé, plus les performances du framework sont impactées.*
-
-* L'épaisseur désigne la valeur CSS [border-width](https://developer.mozilla.org/fr/docs/Web/CSS/border-width).
-* Le trait désigne la valeur CSS [border-style](https://developer.mozilla.org/fr/docs/Web/CSS/border-style).
-* La couleur de la bordure est un [design token couleur](#tokens-couleurs).
-* `1` désigne la bordure la moins visible fournie par le client.
-* `n` désigne la bordure la plus visible fournie par le client. 
-* `n - 1` correspond à une bordure moins visible que `n`.
-
-Exemple de tableau de correspondance de bordures valides, les différentes valeurs sont fournies par le client.
-
-| Index / nom de la bordure | Épaisseur | Trait | Token couleur | Variable CSS |
-|:-|:-|:-|:-|:-|
-| **0** <sup>1</sup> | **0px** <sup>1</sup> | - | - | `--ita-border-0` <sup>1</sup> |
-| 1 | 1px | solid | transparent-800 | `--ita-border-1` |
-| 2 | 1px | solid | transparent-500 | `--ita-border-2` |
-| 3 | 1px | dashed | neutral-500 | `--ita-border-3` |
-| 4 | 1px | solid | neutral-900 | `--ita-border-4` |
-| 5 | 1px | solid | neutral-500 | `--ita-border-5` |
-| 6 | 1px | solid | primary-500 | `--ita-border-6` |
-| 7 | 1px | solid | support-success-500 | `--ita-border-7` |
-| 8 | 1px | solid | support-warning-500 | `--ita-border-8` |
-| 9 | 1px | solid | support-danger-500 | `--ita-border-9` |
-| 10 | 1px | solid | neutral-200 | `--ita-border-10` |
-| 11 | 2px | solid | neutral-900 | `--ita-border-11` |
-| 12 | 2px | solid | neutral-500 | `--ita-border-12` |
-| 13 | 2px | solid | neutral-200 | `--ita-border-13` |
-| 14 | 3px | solid | neutral-500 | `--ita-border-14` |
-| 15 | 3px | solid | primary-500 | `--ita-border-15` |
-| 16 | 3px | double | neutral-500 | `--ita-border-16` |
-
-<sub>(1)</sub> Le token `--ita-border-0` est réservé au ITADS. Le client ne doit pas fournir de design token dont l'épaisseur est nulle.
-
 ### [TOKENS] Coins arrondis
 
 Un coin arrondi est défini par un ou deux rayons de courbure. Le nombre de coins arrondis n'est pas limité. *Cependant, plus le nombre de coins arrondis est élevé, plus les performances du framework sont impactées.* Les différentes valeurs/combinaisons de valeurs sont fournies par le client.
@@ -480,7 +420,6 @@ Les design tokens sont disponibles sous forme de variables CSS désignées comme
 | `$briks-font-families` | `var(--ita-font-family-<token_fonte>)` |
 | `$briks-font-sizes` | `var(--ita-font-size-<TOKEN_TAILLE_DE_FONTE>)` |
 | `$briks-spacings` | `var(--ita-spacing-<TOKEN_ESPACEMENT>)` |
-| `$briks-borders` | `var(--ita-border-<TOKEN_BORDURE>)` |
 | `$briks-border-radius` | `var(--ita-border-radius-<TOKEN_ARRONDI>)` |
 | `$briks-shadows` | `var(--ita-shadow-<TOKEN_ÉLÉVATION>)` |
 
@@ -556,13 +495,6 @@ $briks-spacings: (
     1: 4,                                   // var(--ita-spacing-1)
     0: 0,                                   // var(--ita-spacing-0)
 );
-$briks-borders: (
-    0:  none,                               // var(--ita-border-0)
-    1:  1px solid my-color(neutral-900),    // var(--ita-border-1)
-    2:  1px solid my-color(primary-900),    // var(--ita-border-2)
-    3:  1px solid my-color(neutral-800),    // var(--ita-border-3)
-    4:  1px solid my-color(primary-800),    // var(--ita-border-4)
-);
 $briks-border-radius: (
     0: 0,                                   // var(--ita-border-radius-0)
     1: 3,                                   // var(--ita-border-radius-1)
@@ -603,80 +535,84 @@ La convention de désignation est la suivante:
         * `c-` désigne la propriété `color`.
         * `primary-500` désigne le design token couleur "primary-500" sur lequel est assignée une couleur.
 
-## [DEV] Liste d'abréviations utilisées
+Abréviations désignant les propriété CSS.
 
-Abréviations utilisées dans des modifieurs et utilitaires.
-
-| Propriété CSS | Abréviation |
-|:-|:-|
-| aspect-ratio | `ar-` |
-| background | `bg-` |
-| background-color | `bc-` |
-| background-image | `bi-` |
-| background-position | `bpos-` |
-| background-repeat | `brep-` |
-| background-size | `bsize-` |
-| border | `b-` |
+| Propriété CSS | Abréviation | Composant / modifieur associé | Utilitaire associé |
+|:-|:-|:-|:-|
+| aspect-ratio | `ar-` | `c-dim m-ar-` | `u-ar-` |
+| background | `bg-` | `c-skin m-bg-` | `u-bg-` |
+| background-color | `bc-` | `c-skin m-bc-` | `u-bc-` |
+| background-image | `bi-` | `c-skin m-bi-` | `u-bi-` |
+| background-position | `bpos-` | `c-skin m-bpos-` | `u-bpos-` |
+| background-repeat | `brep-` | `c-skin m-brep-` | `u-brep-` |
+| background-size | `bsize-` | `c-skin m-bsize-` | `u-bsize-` |
+| border | `b-` | `c-skin m-b-` | `u-b-` |
 | border-style | `bstyle-` | `c-skin m-bstyle-` | `u-bstyle-` |
+| border-top-style | `btstyle-` | `c-skin m-btstyle-` | `u-btstyle-` |
+| border-right-style | `brstyle-` | `c-skin m-brstyle-` | `u-brstyle-` |
+| border-bottom-style | `bbstyle-` | `c-skin m-bbstyle-` | `u-bbstyle-` |
+| border-left-style | `blstyle-` | `c-skin m-blstyle-` | `u-blstyle-` |
 | border-width | `bwidth-` | `c-skin m-bwidth-` | `u-bwidth-` |
+| border-top-width | `btwidth-` | `c-skin m-btwidth-` | `u-btwidth-` |
+| border-right-width | `brwidth-` | `c-skin m-brwidth-` | `u-brwidth-` |
+| border-bottom-width | `bbwidth-` | `c-skin m-bbwidth-` | `u-bbwidth-` |
+| border-left-width | `blwidth-` | `c-skin m-blwidth-` | `u-blwidth-` |
 | border-color | `bcolor-` | `c-skin m-bcolor-` | `u-bcolor-` |
 | border-image | `bimage-` | `c-skin m-bimage-` | `u-bimage-` |
-| border-top | `bt-` |
-| border-right | `br-` |
-| border-bottom | `bb-` |
-| border-left | `bl-` |
-| border-radius | `brad-` |
-| border-top-left-radius | `bradtl-` |
-| border-top-right-radius | `bradtr-` |
-| border-bottom-right-radius | `bradbr-` |
-| border-bottom-left-radius | `bradbl-` |
-| bottom | `bottom-` |
-| box-shadow | `bs-` |
-| box-sizing | `bsizing-` |
-| break-after | `ba-` |
-| color | `c-` |
-| cursor | `cur-` |
-| display | `d-` |
-| font-family | `ff-` |
-| font-size | `fs-` |
-| font-style | `fstyle-` |
-| font-weight | `fw-` |
-| height | `h-` |
-| left | `left-` |
-| letter-spacing | `lsp-` |
-| line-height | `lh-` |
-| list-style | `ls-` |
-| margin | `m-` |
-| margin-top | `mt-` |
-| margin-right | `mr-` |
-| margin-bottom | `mb-` |
-| margin-left | `ml-` |
-| max-height | `maxh-` |
-| max-width | `maxw-` |
-| min-height | `minh-` |
-| min-width | `minw-` |
-| opacity | `opa-` |
-| order | `order-` |
-| overflow | `o-` |
-| padding | `p-` |
-| padding-top | `pt-` |
-| padding-right | `pr-` |
-| padding-bottom | `pb-` |
-| padding-left | `pl-` |
-| pointer-events | `pe-` |
-| pos | `pos-` |
-| right | `right-` |
-| text-align | `ta-` |
-| text-decoration | `td-` |
-| text-transform | `tt-` |
-| transition | `transition-` |
-| top | `top-` |
-| vertical-align | `va-` |
-| visibility | `v-` |
-| word-break | `wb-` |
-| white-space | `ws-` |
-| width | `w-` |
-| z-index | `z-` |
+| border-top | `bt-` | `c-skin m-bt-` | `u-bt-` |
+| border-right | `br-` | `c-skin m-br-` | `u-br-` |
+| border-bottom | `bb-` | `c-skin m-bb-` | `u-bb-` |
+| border-left | `bl-` | `c-skin m-bl-` | `u-bl-` |
+| border-radius | `brad-` | `c-skin m-brad-` | `u-brad-` |
+| border-top-left-radius | `bradtl-` | `c-skin m-bradtl-` | `u-bradtl-` |
+| border-top-right-radius | `bradtr-` | `c-skin m-bradtr-` | `u-bradtr-` |
+| border-bottom-right-radius | `bradbr-` | `c-skin m-bradbr-` | `u-bradbr-` |
+| border-bottom-left-radius | `bradbl-` | `c-skin m-bradbl-` | `u-bradbl-` |
+| bottom | `bottom-` | `c-pos m-bottom-` | `u-bottom-` |
+| box-shadow | `bs-` | `c-skin m-bs-` | `u-bs-` |
+| box-sizing | `bsizing-` | `c-dim m-bsizing-` | `u-bsizing-` |
+| color | `c-` | `c-skin m-c-` | `u-c-` |
+| cursor | `cur-` | `c-skin m-cur-` | `u-cur-` |
+| display | `d-` | `c-dis m-` | `u-d-` |
+| font-family | `ff-` | `c-txt m-ff-` | `u-ff-` |
+| font-size | `fs-` | `c-txt m-fs-` | `u-fs-` |
+| font-style | `fstyle-` | `c-txt m-fstyle-` | `u-fstyle-` |
+| font-weight | `fw-` | `c-txt m-fw-` | `u-fw-` |
+| height | `h-` | `c-dim m-h-` | `u-h-` |
+| left | `left-` | `c-pos m-left-` | `u-left-` |
+| letter-spacing | `lsp-` | `c-txt m-lsp-` | `u-lsp-` |
+| line-height | `lh-` | `c-txt m-lh-` | `u-lh-` |
+| list-style | `ls-` | `c-skin m-ls-` | `u-ls-` |
+| margin | `m-` | `c-dim m-m-` | `u-m-` |
+| margin-top | `mt-` | `c-dim m-mt-` | `u-mt-` |
+| margin-right | `mr-` | `c-dim m-mr-` | `u-mr-` |
+| margin-bottom | `mb-` | `c-dim m-mb-` | `u-mb-` |
+| margin-left | `ml-` | `c-dim m-ml-` | `u-ml-` |
+| max-height | `maxh-` | `c-dim m-maxh-` | `u-maxh-` |
+| max-width | `maxw-` | `c-dim m-maxw-` | `u-maxw-` |
+| min-height | `minh-` | `c-dim m-minh-` | `u-minh-` |
+| min-width | `minw-` | `c-dim m-minw-` | `u-minw-` |
+| opacity | `opa-` | `c-skin m-opa-` | `u-opa-` |
+| order | `order-` | `c-dim m-order-` | `u-order-` |
+| overflow | `o-` | `c-dim m-o-` | `u-o-` |
+| padding | `p-` | `c-dim m-p-` | `u-p-` |
+| padding-top | `pt-` | `c-dim m-pt-` | `u-pt-` |
+| padding-right | `pr-` | `c-dim m-pr-` | `u-pr-` |
+| padding-bottom | `pb-` | `c-dim m-pb-` | `u-pb-` |
+| padding-left | `pl-` | `c-dim m-pl-` | `u-pl-` |
+| pointer-events | `pe-` | `c-skin m-pe-` | `u-pe-` |
+| right | `right-` | `c-pos m-right-` | `u-right-` |
+| text-align | `ta-` | `c-txt m-ta-` | `u-ta-` |
+| text-decoration | `td-` | `c-txt m-td-` | `u-td-` |
+| text-transform | `tt-` | `c-txt m-tt-` | `u-tt-` |
+| transition | `transition-` | `c-skin m-transition-` | `u-transition-` |
+| top | `top-` | `c-pos m-top-` | `u-top-` |
+| vertical-align | `va-` | `c-txt m-va-` | `u-va-` |
+| visibility | `v-` | `c-skin m-v-` | `u-v-` |
+| word-break | `wb-` | `c-txt m-wb-` | `u-wb-` |
+| white-space | `ws-` | `c-txt m-ws-` | `u-ws-` |
+| width | `w-` | `c-dim m-w-` | `u-w-` |
+| z-index | `z-` | `c-pos m-z-` | `u-z-` |
 
 ## [DEV] Helpers
 
@@ -812,18 +748,6 @@ my-border-radius($token_1, $token_2, $token_3, $token_4);
 my-border-radius(0, 3, 2, 1);
 // Retourne
 // var(--ita-border-radius-0, 0px) var(--ita-border-radius-3, 12px) var(--ita-border-radius-2, 6px) var(--ita-border-radius-1, 3px)
-```
-
-### [DEV] my-border
-
-```scss
-my-border($token_bordure);
-// Retourne
-// var(--ita-border-token_bordure, <valeur_par_défaut>)
-// Par exemple pour un token bordure 3: 1px solid my-color(neutral-800)
-my-border(10);
-// Retourne
-// var(--ita-border-3, 1px solid var(--ita-color-neutral-800, #e1e1e1))
 ```
 
 ### [DEV] my-shadow
