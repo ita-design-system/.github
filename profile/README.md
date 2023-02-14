@@ -16,3 +16,17 @@
 - [ ] **Documenter l'usage et le développement** des composants.
 - [ ] **Donner envie de l'utiliser** à l'ensemble de l'équipe de développement.
 
+## Liens
+
+* [Prérequis clients ITA](https://github.com/ita-design-system/.github/blob/main/prerequis.md) Liste des spécifications que le client d'ITA doit retourner à l'équipe de développement avant de commencer le projet
+* [Starter Template ITA](https://github.com/ita-design-system/starter-template) Point de départ pour tout nouveau projet web utilisant le système de design de IT Automotive. 
+* [ITA Jekyll LibDoc](https://github.com/ita-design-system/jekyll-libdoc) Générateur de documentation et compilateur SASS
+* CSS
+  * [c-dis.scss](https://github.com/ita-design-system/c-dis.scss) Composant CSS dédié aux dimensions et comportements liés à la taille des éléments.
+  * [c-dim.scss](https://github.com/ita-design-system/c-dim.scss) Composant CSS dédié à la propriété display des éléments. 
+  * [c-pos.scss](https://github.com/ita-design-system/c-pos.scss) Composant CSS dédié aux positionnements des éléments. 
+  * [c-txt.scss](https://github.com/ita-design-system/c-txt.scss) Composant CSS dédié aux textes.
+  * [c-skin.scss](https://github.com/ita-design-system/c-skin.scss) Composant CSS dédié aux aspects et apparences des éléments.
+* JS
+  * [c-toggle.js](https://github.com/ita-design-system/c-toggle.js) Librairie JS dédiée à la bascule d’état des classes CSS d’un élément.
+  * [c-tabs.js](https://github.com/ita-design-system/c-tabs.js) Librairie JS dédiée à la gestion d'onglets et tabulations.
