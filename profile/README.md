@@ -30,3 +30,24 @@
 * JS
   * [c-toggle.js](https://github.com/ita-design-system/c-toggle.js) Librairie JS dédiée à la bascule d’état des classes CSS d’un élément.
   * [c-tabs.js](https://github.com/ita-design-system/c-tabs.js) Librairie JS dédiée à la gestion d'onglets et tabulations.
+  
+## Changelog
+
+### 2023.02.15
+
+* [DOC] Réorganisation de la documentation.
+* [DOC] Mise à jour de la documentation dans [Starter Template ITA](https://github.com/ita-design-system/starter-template).
+* [FEAT] Dépréciation des $briks-borders qui ne sont plus des design tokens et donc plus demandés au client. 
+  * Les `border-width` et les `border-style` sont factorisés dans [c-skin_generic](https://github.com/ita-design-system/c-skin.scss/blob/main/_sass/_skin_generic.scss):
+   * `border-width` 3 épaisseurs disponibles dans c-skin générique: 1px, 2px et 3px. Pour plus d'épaisseurs, les renseigner dans [c-skin extension](https://github.com/ita-design-system/starter-template/blob/main/_sass/_skin_extension.scss).
+   * `border-style` 1 style disponible dans c-skin générique: solid.  Pour plus de styles de bordures, les renseigner dans [c-skin extension](https://github.com/ita-design-system/starter-template/blob/main/_sass/_skin_extension.scss).
+   * `border-color` les couleurs de bordures sont à renseigner selon les besoins, dans [c-skin extension](https://github.com/ita-design-system/starter-template/blob/main/_sass/_skin_extension.scss)
+* [FEAT] Retrait des tokens bordures du [Starter Template ITA](https://github.com/ita-design-system/starter-template) et des [tokens génériques](https://github.com/ita-design-system/jekyll-libdoc/blob/main/_sass/briks/settings/tokens/_generic.scss)
+* [FEAT] Ajout de l'affichage automatique en JS des variables CSS et valeurs CSS sur les pages dédiées aux design tokens:
+  * [Couleurs](https://ita-design-system.github.io/starter-template/content/doc/1.colors.html)
+  * [Fontes](https://ita-design-system.github.io/starter-template/content/doc/3.font-families.html)
+  * [Tailles de fontes](https://ita-design-system.github.io/starter-template/content/doc/4.font-sizes.html)
+  * [Espacements](https://ita-design-system.github.io/starter-template/content/doc/5.spacings.html)
+  * [Arrondis](https://ita-design-system.github.io/starter-template/content/doc/6.border-radii.html)
+  * [Élévations](https://ita-design-system.github.io/starter-template/content/doc/7.shadows.html)
+
