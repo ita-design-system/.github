@@ -50,4 +50,5 @@
   * [Espacements](https://ita-design-system.github.io/starter-template/content/doc/5.spacings.html)
   * [Arrondis](https://ita-design-system.github.io/starter-template/content/doc/6.border-radii.html)
   * [Élévations](https://ita-design-system.github.io/starter-template/content/doc/7.shadows.html)
+* [DOC] Mise à jour [Prérequis clients ITA](https://github.com/ita-design-system/.github/blob/main/prerequis.md).
 
