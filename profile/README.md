@@ -33,6 +33,13 @@
   
 ## Changelog
 
+### 2023.02.20
+
+* [FEAT] Ajout de la vérification de la portée des propriétés CSS de chaque composant c-dis, c-dim, c-pos, c-txt et c-skin. Si une propriété CSS déclarée n'est pas associée au scope du composant, un @warn SASS s'affiche dans la console.
+  * `WARNING: PROPERTY_NAME is not supported in c-COMPONENT_NAME scope`
+  * Par exemple `WARNING: transform is not supported in c-skin scope`
+* [DOC] [Liste complète](https://github.com/ita-design-system/starter-template#css-composant) de la portée des propriétés des composants. 
+
 ### 2023.02.15
 
 * [DOC] Réorganisation de la documentation.
