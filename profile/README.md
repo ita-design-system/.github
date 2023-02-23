@@ -33,6 +33,10 @@
   
 ## Changelog
 
+### 2023.02.23
+
+* [FEAT] Ajout [scroll-snap](https://ita-design-system.github.io/c-dim.scss/content/scroll-snap.html) et [scroll-behavior](https://ita-design-system.github.io/c-dim.scss/content/scroll-behavior.html) sur [c-dim](https://ita-design-system.github.io/c-dim.scss/) 
+
 ### 2023.02.20
 
 * [FEAT] Ajout de la vérification de la portée des propriétés CSS de chaque composant c-dis, c-dim, c-pos, c-txt et c-skin. Si une propriété CSS déclarée n'est pas associée au scope du composant, un @warn SASS s'affiche dans la console.
