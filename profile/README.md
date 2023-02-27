@@ -33,7 +33,7 @@
   
 ## Changelog
 
-### 2023.02.23
+### 2023.02.27
 
 * [FEAT] Ajout `m-pe-auto` (pointer-events: auto) sur [c-skin](https://ita-design-system.github.io/c-skin.scss/) 
 
