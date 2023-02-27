@@ -35,6 +35,10 @@
 
 ### 2023.02.23
 
+* [FEAT] Ajout `m-pe-auto` (pointer-events: auto) sur [c-skin](https://ita-design-system.github.io/c-skin.scss/) 
+
+### 2023.02.23
+
 * [FEAT] Ajout [scroll-snap](https://ita-design-system.github.io/c-dim.scss/content/scroll-snap.html) et [scroll-behavior](https://ita-design-system.github.io/c-dim.scss/content/scroll-behavior.html) sur [c-dim](https://ita-design-system.github.io/c-dim.scss/) 
 
 ### 2023.02.20
