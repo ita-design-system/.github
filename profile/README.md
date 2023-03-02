@@ -18,6 +18,7 @@
 
 ## Liens
 
+* [Workflow édition d'un composant générique](https://github.com/ita-design-system/.github/blob/main/workflow-edition-composant-generique.md) Déroulement des opérations à effectuer lors de la modification d'un composant générique.
 * [Prérequis clients ITA](https://github.com/ita-design-system/.github/blob/main/prerequis.md) Liste des spécifications que le client d'ITA doit retourner à l'équipe de développement avant de commencer le projet
 * [Starter Template ITA](https://github.com/ita-design-system/starter-template) Point de départ pour tout nouveau projet web utilisant le système de design de IT Automotive. 
 * [ITA Jekyll LibDoc](https://github.com/ita-design-system/jekyll-libdoc) Générateur de documentation et compilateur SASS
