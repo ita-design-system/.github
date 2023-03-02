@@ -35,7 +35,7 @@
 
 ### 2023.03.02
 
-* [FEAT] Ajout `m-lh-7` et `m-lh-8` line height 0.7em et 0.8em sur [c-txt](https://ita-design-system.github.io/c-txt.scss/) 
+* [FEAT] Ajout `m-lh-7` `m-lh-8` et `m-lh-9` line height 1.7em 1.8em et 1.9em sur [c-txt](https://ita-design-system.github.io/c-txt.scss/) 
 
 ### 2023.02.27
 
