@@ -33,6 +33,10 @@
   
 ## Changelog
 
+### 2023.03.02
+
+* [FEAT] Ajout `m-lh-7` et `m-lh-8` line height 0.7em et 0.8em sur [c-txt](https://ita-design-system.github.io/c-txt.scss/) 
+
 ### 2023.02.27
 
 * [FEAT] Ajout `m-pe-auto` (pointer-events: auto) sur [c-skin](https://ita-design-system.github.io/c-skin.scss/) 
