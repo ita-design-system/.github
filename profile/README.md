@@ -34,6 +34,12 @@
   
 ## Changelog
 
+### 2023.03.14
+
+* [FEAT] Ajout modifieurs
+  * `m-maxw-80vw` `m-maxw-100vw` [c-dim width](https://ita-design-system.github.io/c-dim.scss/content/width.html)  
+  * `m-maxh-80vh` `m-maxh-100vh` [c-dim height](https://ita-design-system.github.io/c-dim.scss/content/height.html) 
+
 ### 2023.03.02
 
 * [FEAT] Ajout `m-lh-7` `m-lh-8` et `m-lh-9` line height 1.7em 1.8em et 1.9em sur [c-txt](https://ita-design-system.github.io/c-txt.scss/) 
