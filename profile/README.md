@@ -34,6 +34,20 @@
   
 ## Changelog
 
+### 2023.03.16
+
+* [FEAT] Ajout modifieurs dédiés au background sur c-skin [démo](https://ita-design-system.github.io/c-skin.scss/):
+  * background: `m-bg-0` et `m-bg-none` (équivalents) -> `background: none`
+  * background-size: 
+    * `m-bsize-cover` -> `background-size: cover`
+    * `m-bsize-contain` -> `background-size: contain`
+  * background-repeat: 
+    * `m-brep-no-repeat` -> `background-repeat: no-repeat`
+    * `m-brep-repeat-x` -> `background-repeat: repeat-x`
+    * `m-brep-repeat-y` -> `background-repeat: repeat-y`
+  * background-position: 
+    * `m-bpos-center` -> `background-position: center`
+
 ### 2023.03.14
 
 * [FEAT] Ajout modifieurs
