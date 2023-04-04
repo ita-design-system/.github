@@ -2,6 +2,10 @@
 
 Aide-mémoire de personnalisation des formulaires Symfony complément de https://symfony.com/doc/current/form/form_customization.html.
 
+## Form Types
+
+Les formulaires sont définis dans `src/Form/Type` [doc Symfony](https://symfony.com/doc/current/reference/forms/types.html). Si besoin, on peut paramétrer les attributs dans les Form Types.
+
 ## Base
 
 ```twig
