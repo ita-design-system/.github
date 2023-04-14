@@ -34,6 +34,10 @@
   
 ## Changelog
 
+### 2023.04.14
+
+[FEAT] Release [c-preview.js](https://github.com/ita-design-system/c-preview.js) Librairie JS dédiée à l'affichage et des fichiers sélectionnés sur un input type="file"
+
 ### 2023.03.16
 
 * [FEAT] Ajout modifieurs dédiés au background sur c-skin [démo](https://ita-design-system.github.io/c-skin.scss/):
