@@ -31,6 +31,7 @@
 * JS
   * [c-toggle.js](https://github.com/ita-design-system/c-toggle.js) Librairie JS dédiée à la bascule d’état des classes CSS d’un élément.
   * [c-tabs.js](https://github.com/ita-design-system/c-tabs.js) Librairie JS dédiée à la gestion d'onglets et tabulations.
+  * [c-preview.js](https://github.com/ita-design-system/c-preview.js) Librairie JS dédiée à l'affichage et des fichiers sélectionnés sur un input type="file"
   
 ## Changelog
 
