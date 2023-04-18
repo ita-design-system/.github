@@ -35,6 +35,10 @@
   
 ## Changelog
 
+### 2023.04.18
+
+[RELEASE] [c-toggle v0.1.2](https://github.com/ita-design-system/c-toggle.js/releases/tag/v0.1.2)
+
 ### 2023.04.17
 
 [RELEASE] [c-toggle v0.1.1](https://github.com/ita-design-system/c-toggle.js/releases/tag/v0.1.1)
