@@ -35,6 +35,10 @@
   
 ## Changelog
 
+### 2023.04.17
+
+[RELEASE] [c-toggle v0.1.1](https://github.com/ita-design-system/c-toggle.js/releases/tag/v0.1.1)
+
 ### 2023.04.14
 
 [FEAT] Release [c-preview.js](https://github.com/ita-design-system/c-preview.js) Librairie JS dédiée à l'affichage et des fichiers sélectionnés sur un input type="file"
