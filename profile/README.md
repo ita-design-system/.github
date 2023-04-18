@@ -1,8 +1,25 @@
 # ITA Design System
 
-*En cours d'écriture*. 
+**Documentation du du système de design IT Automotive (ITADS).**
 
-**Prérequis clients et fonctionnalités du système de design IT Automotive (ITADS).**
+
+## Liens
+
+* **[Starter Template ITA](https://github.com/ita-design-system/starter-template)** <br>Point de départ pour tout nouveau projet web utilisant le système de design de IT Automotive. 
+* **[ITA Jekyll LibDoc](https://github.com/ita-design-system/jekyll-libdoc)** <br>Générateur de documentation et compilateur SASS
+* CSS
+  * **[c-dis.scss](https://github.com/ita-design-system/c-dis.scss)** <br>Composant CSS dédié aux dimensions et comportements liés à la taille des éléments.
+  * **[c-dim.scss](https://github.com/ita-design-system/c-dim.scss)** <br>Composant CSS dédié à la propriété display des éléments. 
+  * **[c-pos.scss](https://github.com/ita-design-system/c-pos.scss)** <br>Composant CSS dédié aux positionnements des éléments. 
+  * **[c-txt.scss](https://github.com/ita-design-system/c-txt.scss)** <br>Composant CSS dédié aux textes.
+  * **[c-skin.scss](https://github.com/ita-design-system/c-skin.scss)** <br>Composant CSS dédié aux aspects et apparences des éléments.
+* Javascript
+  * **[c-toggle.js](https://github.com/ita-design-system/c-toggle.js)** <br>Librairie JS dédiée à la bascule d’état des classes CSS d’un élément.
+  * **[c-tabs.js](https://github.com/ita-design-system/c-tabs.js)** <br>Librairie JS dédiée à la gestion d'onglets et tabulations.
+  * **[c-preview.js](https://github.com/ita-design-system/c-preview.js)** <br>Librairie JS dédiée à l'affichage et des fichiers sélectionnés sur un input type="file"
+* **[Workflow édition d'un composant générique](https://github.com/ita-design-system/.github/blob/main/workflow-edition-composant-generique.md)** <br>Déroulement des opérations à effectuer lors de la modification d'un composant générique.
+* **[Prérequis clients ITA](https://github.com/ita-design-system/.github/blob/main/prerequis.md)** <br>Liste des spécifications que le client d'ITA doit retourner à l'équipe de développement avant de commencer le projet
+
 
 ## But du projet
 
@@ -16,24 +33,8 @@
 - [ ] **Documenter l'usage et le développement** des composants.
 - [ ] **Donner envie de l'utiliser** à l'ensemble de l'équipe de développement.
 
-## Liens
-
-* [Workflow édition d'un composant générique](https://github.com/ita-design-system/.github/blob/main/workflow-edition-composant-generique.md) Déroulement des opérations à effectuer lors de la modification d'un composant générique.
-* [Prérequis clients ITA](https://github.com/ita-design-system/.github/blob/main/prerequis.md) Liste des spécifications que le client d'ITA doit retourner à l'équipe de développement avant de commencer le projet
-* [Starter Template ITA](https://github.com/ita-design-system/starter-template) Point de départ pour tout nouveau projet web utilisant le système de design de IT Automotive. 
-* [ITA Jekyll LibDoc](https://github.com/ita-design-system/jekyll-libdoc) Générateur de documentation et compilateur SASS
-* CSS
-  * [c-dis.scss](https://github.com/ita-design-system/c-dis.scss) Composant CSS dédié aux dimensions et comportements liés à la taille des éléments.
-  * [c-dim.scss](https://github.com/ita-design-system/c-dim.scss) Composant CSS dédié à la propriété display des éléments. 
-  * [c-pos.scss](https://github.com/ita-design-system/c-pos.scss) Composant CSS dédié aux positionnements des éléments. 
-  * [c-txt.scss](https://github.com/ita-design-system/c-txt.scss) Composant CSS dédié aux textes.
-  * [c-skin.scss](https://github.com/ita-design-system/c-skin.scss) Composant CSS dédié aux aspects et apparences des éléments.
-* JS
-  * [c-toggle.js](https://github.com/ita-design-system/c-toggle.js) Librairie JS dédiée à la bascule d’état des classes CSS d’un élément.
-  * [c-tabs.js](https://github.com/ita-design-system/c-tabs.js) Librairie JS dédiée à la gestion d'onglets et tabulations.
-  * [c-preview.js](https://github.com/ita-design-system/c-preview.js) Librairie JS dédiée à l'affichage et des fichiers sélectionnés sur un input type="file"
-  
-## Changelog
+<details>
+  <summary><strong>Changelog</strong></summary>
 
 ### 2023.04.18
 
@@ -104,4 +105,7 @@
   * [Arrondis](https://ita-design-system.github.io/starter-template/content/doc/6.border-radii.html)
   * [Élévations](https://ita-design-system.github.io/starter-template/content/doc/7.shadows.html)
 * [DOC] Mise à jour [Prérequis clients ITA](https://github.com/ita-design-system/.github/blob/main/prerequis.md).
+
+
+</details>
 
