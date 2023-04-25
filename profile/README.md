@@ -16,6 +16,7 @@
 * Javascript
   * **[c-toggle.js](https://github.com/ita-design-system/c-toggle.js)** <br>Librairie JS dédiée à la bascule d’état des classes CSS d’un élément.
   * **[c-tabs.js](https://github.com/ita-design-system/c-tabs.js)** <br>Librairie JS dédiée à la gestion d'onglets et tabulations.
+  * **[c-scrollspy.js](https://github.com/ita-design-system/c-scrollspy.js)** <br>Librairie JS dédiée à la détection de la position d'un élément DOM dans la fenêtre de visualisation.
   * **[c-preview.js](https://github.com/ita-design-system/c-preview.js)** <br>Librairie JS dédiée à l'affichage et des fichiers sélectionnés sur un input type="file"
 * **[Workflow édition d'un composant générique](https://github.com/ita-design-system/.github/blob/main/workflow-edition-composant-generique.md)** <br>Déroulement des opérations à effectuer lors de la modification d'un composant générique.
 * **[Prérequis clients ITA](https://github.com/ita-design-system/.github/blob/main/prerequis.md)** <br>Liste des spécifications que le client d'ITA doit retourner à l'équipe de développement avant de commencer le projet
@@ -35,6 +36,10 @@
 
 <details>
   <summary><strong>Changelog</strong></summary>
+
+### 2023.04.25
+
+[RELEASE] [c-scrollspy v0.1.0](https://github.com/ita-design-system/c-scrollspy.js/releases/tag/v0.1.0)
 
 ### 2023.04.18
 
