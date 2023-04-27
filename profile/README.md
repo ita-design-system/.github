@@ -16,6 +16,7 @@
 * Javascript
   * **[c-toggle.js](https://github.com/ita-design-system/c-toggle.js)** <br>Librairie JS dédiée à la bascule d’état des classes CSS d’un élément.
   * **[c-tabs.js](https://github.com/ita-design-system/c-tabs.js)** <br>Librairie JS dédiée à la gestion d'onglets et tabulations.
+  * **[c-scrollsyncbar.js](https://github.com/ita-design-system/c-scrollsyncbar.js)** <br>Librairie JS permettant d'afficher/masquer des éléments HTML progressivement en fonction du sens de défilement de la fenêtre.
   * **[c-scrollspy.js](https://github.com/ita-design-system/c-scrollspy.js)** <br>Librairie JS dédiée à la détection de la position d'un élément DOM dans la fenêtre de visualisation.
   * **[c-preview.js](https://github.com/ita-design-system/c-preview.js)** <br>Librairie JS dédiée à l'affichage et des fichiers sélectionnés sur un input type="file"
 * **[Workflow édition d'un composant générique](https://github.com/ita-design-system/.github/blob/main/workflow-edition-composant-generique.md)** <br>Déroulement des opérations à effectuer lors de la modification d'un composant générique.
@@ -37,17 +38,21 @@
 <details>
   <summary><strong>Changelog</strong></summary>
 
+### 2023.04.27
+
+[RELEASE] [c-scrollsyncbar.js v0.1.0](https://github.com/ita-design-system/c-scrollsyncbar.js/releases/tag/v0.1.0)
+
 ### 2023.04.25
 
-[RELEASE] [c-scrollspy v0.1.0](https://github.com/ita-design-system/c-scrollspy.js/releases/tag/v0.1.0)
+[RELEASE] [c-scrollspy.js v0.1.0](https://github.com/ita-design-system/c-scrollspy.js/releases/tag/v0.1.0)
 
 ### 2023.04.18
 
-[RELEASE] [c-toggle v0.1.2](https://github.com/ita-design-system/c-toggle.js/releases/tag/v0.1.2)
+[RELEASE] [c-toggle.js v0.1.2](https://github.com/ita-design-system/c-toggle.js/releases/tag/v0.1.2)
 
 ### 2023.04.17
 
-[RELEASE] [c-toggle v0.1.1](https://github.com/ita-design-system/c-toggle.js/releases/tag/v0.1.1)
+[RELEASE] [c-toggle.js v0.1.1](https://github.com/ita-design-system/c-toggle.js/releases/tag/v0.1.1)
 
 ### 2023.04.14
 
