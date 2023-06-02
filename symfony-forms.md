@@ -702,3 +702,14 @@ Les formulaires sont définis dans `src/Form/Type` [doc Symfony](https://symfony
 
 
 
+## Séparer des éléments de formulaires imbriqués
+
+Un `form.name` contient plusieurs éléments de formulaires
+
+```twig
+{% for child in form.name %}
+        {{ form_widget(child) }}
+        {{ form_label(child) }}
+        {{ form_errors(child) }}
+{% endfor %}
+```
