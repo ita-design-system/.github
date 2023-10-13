@@ -5,6 +5,7 @@
 
 ## Liens
 
+* **[Tableau d’abréviations](https://github.com/ita-design-system/starter-template/tree/main#dev-tableau-des-abr%C3%A9viations-modifieurs)** <br>Abréviations désignant les propriété CSS.
 * **[Starter Template ITA](https://github.com/ita-design-system/starter-template)** <br>Point de départ pour tout nouveau projet web utilisant le système de design de IT Automotive. 
 * **[ITA Jekyll LibDoc](https://github.com/ita-design-system/jekyll-libdoc)** <br>Générateur de documentation et compilateur SASS
 * CSS
