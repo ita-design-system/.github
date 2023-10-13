@@ -39,6 +39,19 @@
 <details>
   <summary><strong>Changelog</strong></summary>
 
+### 2023.10.13
+
+* [FEAT] Ajout modifieurs dédiés à la graisse des textes sur c-txt [démo](https://ita-design-system.github.io/c-txt.scss/):
+  * `m-fw-100` -> `font-weight: 100`
+  * `m-fw-200` -> `font-weight: 200`
+  * `m-fw-300` -> `font-weight: 300`
+  * `m-fw-400` -> `font-weight: 400`
+  * `m-fw-500` -> `font-weight: 500`
+  * `m-fw-600` -> `font-weight: 600`
+  * `m-fw-700` -> `font-weight: 700`
+  * `m-fw-800` -> `font-weight: 800`
+  * `m-fw-900` -> `font-weight: 900`
+
 ### 2023.04.27
 
 [RELEASE] [c-scrollsyncbar.js v0.1.0](https://github.com/ita-design-system/c-scrollsyncbar.js/releases/tag/v0.1.0)
