@@ -39,6 +39,14 @@
 <details>
   <summary><strong>Changelog</strong></summary>
 
+### 2023.11.30
+
+* [FEAT] Ajout modifieurs dédiés aux césures tirets sur c-txt [démo](https://ita-design-system.github.io/c-txt.scss/content/word-break.html):
+  * `m-hy-auto` -> `hyphens: auto`
+  * `m-hy-manual` -> `hyphens: manual`
+  * `m-hy-none` -> `hyphens: none`
+ 
+
 ### 2023.10.13
 
 * [FEAT] Ajout modifieurs dédiés à la graisse des textes sur c-txt [démo](https://ita-design-system.github.io/c-txt.scss/):
