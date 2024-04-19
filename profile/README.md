@@ -14,6 +14,7 @@
   * **[c-pos.scss](https://github.com/ita-design-system/c-pos.scss)** <br>Composant CSS dédié aux positionnements des éléments. 
   * **[c-txt.scss](https://github.com/ita-design-system/c-txt.scss)** <br>Composant CSS dédié aux textes.
   * **[c-skin.scss](https://github.com/ita-design-system/c-skin.scss)** <br>Composant CSS dédié aux aspects et apparences des éléments.
+  * **[utilities.scss](https://github.com/ita-design-system/utilities.scss)** <br>Utilitaires génériques.
 * Javascript
   * **[c-toggle.js](https://github.com/ita-design-system/c-toggle.js)** <br>Librairie JS dédiée à la bascule d’état des classes CSS d’un élément.
   * **[c-tabs.js](https://github.com/ita-design-system/c-tabs.js)** <br>Librairie JS dédiée à la gestion d'onglets et tabulations.
@@ -38,6 +39,12 @@
 
 <details>
   <summary><strong>Changelog</strong></summary>
+ 
+### 2024.04.19
+
+* [FEAT] Ajout utilitaire box-shadow sur utilitaires [démo](https://ita-design-system.github.io/utilities.scss/#utility-box-shadow):
+  * `u-bs-0` -> `box-shadow: none !important`
+ 
 
 ### 2023.11.30
 
